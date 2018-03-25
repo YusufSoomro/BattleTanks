@@ -6,8 +6,7 @@
 void ATankPlayerController::BeginPlay() {
 	Super::BeginPlay();
 
-	ATank *ControlledTank;
-	ControlledTank = GetControlledTank();
+	ATank *ControlledTank = GetControlledTank();
 
 	if (!ControlledTank) {
 		UE_LOG(LogTemp, Warning, TEXT("Didn't get tank"));
