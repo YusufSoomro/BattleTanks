@@ -16,6 +16,15 @@ void ATankAIController::BeginPlay() {
 	}
 }
 
+void ATankAIController::Tick(float DeltaTime) {
+	Super::Tick(DeltaTime);
+	AimTowardsCrossHair();
+}
+
 ATank* ATankAIController::GetPlayerTank() const {
 	return Cast<ATank>(GetWorld()->GetFirstPlayerController()->GetPawn());
+}
+
+void ATankAIController::AimTowardsCrossHair() {
+	return;
 }
