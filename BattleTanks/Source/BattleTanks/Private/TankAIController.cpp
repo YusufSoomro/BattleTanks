@@ -26,5 +26,19 @@ ATank* ATankAIController::GetPlayerTank() const {
 }
 
 void ATankAIController::AimTowardsCrossHair() {
+	FVector HitLocation;
+
+	if (GetSightRayHitLocation(HitLocation)) {
+		UE_LOG(LogTemp, Warning, TEXT("HitLocation: %s"), *HitLocation.ToString());
+
+		// Aim at location
+	}
+
 	return;
+}
+
+bool ATankAIController::GetSightRayHitLocation(FVector &OutHitLocation) const {
+	OutHitLocation = FVector(1.0);
+
+	return true;
 }

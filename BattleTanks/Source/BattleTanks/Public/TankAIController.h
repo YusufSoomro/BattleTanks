@@ -20,4 +20,5 @@ class BATTLETANKS_API ATankAIController : public AAIController
 
 		ATank* GetPlayerTank() const;
 		void AimTowardsCrossHair();
+		bool GetSightRayHitLocation(FVector &OutHitLocation) const;
 };
